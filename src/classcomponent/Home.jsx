@@ -58,20 +58,6 @@ export default class Home extends Component {
      <h5 className='container-fluid bg-secondary m-2 p-2 text-white'>
         {this.props.q} News Article
      </h5>
-     <InfiniteScroll
-  dataLength={this.state.article.length} //This is important field to render the next data
-  next={this.fetchData}
-  hasMore={this.state.article.length < this.state.totalResults}
-  loader={<div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>}
-  endMessage={
-    <p style={{ textAlign: 'center' }}>
-      <b>No more data</b>
-    </p>
-  }
-  // below props only if you need pull down functionality
->
 
 
      <div className='row'>
@@ -91,7 +77,6 @@ export default class Home extends Component {
                 
         })}
             </div>
-            </InfiniteScroll>
 
       </div>
     )
